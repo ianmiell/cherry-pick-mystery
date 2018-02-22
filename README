@@ -210,31 +210,3 @@ imiell@Ians-MacBook-Air-2:~/tmp/cherry/repob  ⑂ master +    git log --patch
 
 
 
-mkdir -p repoa
-mkdir -p repob
-cd repoa
-git init
-cat > acommonfile << END
-Line 1 is common
-Line 2 is a random string asdasdads
-END
-git commit -am 'Initial repoa'
-cat >> acommonfile << END
-checkin 2 repoa
-END
-git commit -am 'Checkin 2'
-cat >> acommonfile << END
-checkin 3 repoa
-END
-git commit -am 'Checkin 3'
-cd ../repob
-cat > acommonfile << END
-Line 1 is common
-Line 2 is a random string sdfsdfsdf
-END
-git commit -am 'Initial repob'
-git remote add repoa ../repoa
-git fetch repoa
-echo 'Now get repoas checkin 3 commit id and cherry-pick it'
-
-
