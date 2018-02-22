@@ -1,0 +1,240 @@
+commit 39d129ec161237c53455a02ba5c7fef65f6c2951 (a/master)
+Author: Ian Miell <ian.miell@gmail.com>
+Date:   Thu Feb 22 09:58:56 2018 +0000
+
+    addanother
+
+diff --git a/acommonfile b/acommonfile
+index c146f47..f47d954 100644
+--- a/acommonfile
++++ b/acommonfile
+@@ -1,3 +1,4 @@
+ Line 1 is common
+ This Line 2 is different
+ Add this file in one commit
++Add this line in another commit
+imiell@Ians-MacBook-Air-2:~/tmp/cherry/repob  ⑂ master +    ls
+acommonfile	afilea
+imiell@Ians-MacBook-Air-2:~/tmp/cherry/repob  ⑂ master +    git log --patch
+commit 48813901c3fccdce2cff497fea24caca1fd794a5 (HEAD -> master)
+Author: Ian Miell <ian.miell@gmail.com>
+Date:   Thu Feb 22 09:50:15 2018 +0000
+
+    merged
+
+diff --git a/acommonfile b/acommonfile
+index 68c2818..cef56ad 100644
+--- a/acommonfile
++++ b/acommonfile
+@@ -1,3 +1,4 @@
+ Line 1 is common
+ Line 2 is not common
+ Line 3
++This Line 2 is different
+
+commit 9f856f8b808e3dac2b1e2567d79f9aff36d96f3d
+Author: Ian Miell <ian.miell@gmail.com>
+Date:   Thu Feb 22 09:49:49 2018 +0000
+
+    change
+
+diff --git a/acommonfile b/acommonfile
+index e69de29..68c2818 100644
+--- a/acommonfile
++++ b/acommonfile
+@@ -0,0 +1,3 @@
++Line 1 is common
++Line 2 is not common
++Line 3
+
+commit 4e2f068170e2c2cf701daa26aad7ceae1c68edaf
+Author: Ian Miell <ian.miell@gmail.com>
+Date:   Thu Feb 22 09:49:29 2018 +0000
+
+    inital
+
+diff --git a/acommonfile b/acommonfile
+new file mode 100644
+index 0000000..e69de29
+diff --git a/afilea b/afilea
+new file mode 100644
+index 0000000..e69de29
+imiell@Ians-MacBook-Air-2:~/tmp/cherry/repob  ⑂ master +    git fetch a
+imiell@Ians-MacBook-Air-2:~/tmp/cherry/repob  ⑂ master +    git log --patch --graph
+* commit 48813901c3fccdce2cff497fea24caca1fd794a5 (HEAD -> master)
+| Author: Ian Miell <ian.miell@gmail.com>
+| Date:   Thu Feb 22 09:50:15 2018 +0000
+| 
+|     merged
+| 
+| diff --git a/acommonfile b/acommonfile
+| index 68c2818..cef56ad 100644
+| --- a/acommonfile
+| +++ b/acommonfile
+| @@ -1,3 +1,4 @@
+|  Line 1 is common
+|  Line 2 is not common
+|  Line 3
+| +This Line 2 is different
+| 
+* commit 9f856f8b808e3dac2b1e2567d79f9aff36d96f3d
+| Author: Ian Miell <ian.miell@gmail.com>
+| Date:   Thu Feb 22 09:49:49 2018 +0000
+| 
+|     change
+| 
+| diff --git a/acommonfile b/acommonfile
+| index e69de29..68c2818 100644
+| --- a/acommonfile
+| +++ b/acommonfile
+| @@ -0,0 +1,3 @@
+| +Line 1 is common
+| +Line 2 is not common
+| +Line 3
+| 
+* commit 4e2f068170e2c2cf701daa26aad7ceae1c68edaf
+  Author: Ian Miell <ian.miell@gmail.com>
+  Date:   Thu Feb 22 09:49:29 2018 +0000
+  
+      inital
+  
+  diff --git a/acommonfile b/acommonfile
+  new file mode 100644
+  index 0000000..e69de29
+  diff --git a/afilea b/afilea
+  new file mode 100644
+  index 0000000..e69de29
+imiell@Ians-MacBook-Air-2:~/tmp/cherry/repob  ⑂ master +    git log --patch --graph --all
+* commit 48813901c3fccdce2cff497fea24caca1fd794a5 (HEAD -> master)
+| Author: Ian Miell <ian.miell@gmail.com>
+| Date:   Thu Feb 22 09:50:15 2018 +0000
+| 
+|     merged
+| 
+| diff --git a/acommonfile b/acommonfile
+| index 68c2818..cef56ad 100644
+| --- a/acommonfile
+| +++ b/acommonfile
+| @@ -1,3 +1,4 @@
+|  Line 1 is common
+|  Line 2 is not common
+|  Line 3
+| +This Line 2 is different
+| 
+* commit 9f856f8b808e3dac2b1e2567d79f9aff36d96f3d
+| Author: Ian Miell <ian.miell@gmail.com>
+| Date:   Thu Feb 22 09:49:49 2018 +0000
+| 
+|     change
+| 
+| diff --git a/acommonfile b/acommonfile
+| index e69de29..68c2818 100644
+| --- a/acommonfile
+| +++ b/acommonfile
+| @@ -0,0 +1,3 @@
+| +Line 1 is common
+| +Line 2 is not common
+| +Line 3
+| 
+* commit 4e2f068170e2c2cf701daa26aad7ceae1c68edaf
+  Author: Ian Miell <ian.miell@gmail.com>
+  Date:   Thu Feb 22 09:49:29 2018 +0000
+  
+      inital
+  
+  diff --git a/acommonfile b/acommonfile
+  new file mode 100644
+  index 0000000..e69de29
+  diff --git a/afilea b/afilea
+  new file mode 100644
+  index 0000000..e69de29
+  
+* commit 39d129ec161237c53455a02ba5c7fef65f6c2951 (a/master)
+| Author: Ian Miell <ian.miell@gmail.com>
+| Date:   Thu Feb 22 09:58:56 2018 +0000
+| 
+|     addanother
+| 
+| diff --git a/acommonfile b/acommonfile
+| index c146f47..f47d954 100644
+| --- a/acommonfile
+| +++ b/acommonfile
+| @@ -1,3 +1,4 @@
+|  Line 1 is common
+|  This Line 2 is different
+|  Add this file in one commit
+| +Add this line in another commit
+| 
+* commit 8c3806852e5a49bd087fb91d1761f07661a14f39
+| Author: Ian Miell <ian.miell@gmail.com>
+| Date:   Thu Feb 22 09:58:44 2018 +0000
+| 
+|     add
+| 
+| diff --git a/acommonfile b/acommonfile
+| index e449989..c146f47 100644
+| --- a/acommonfile
+| +++ b/acommonfile
+| @@ -1,2 +1,3 @@
+|  Line 1 is common
+|  This Line 2 is different
+| +Add this file in one commit
+| 
+* commit 7dbb9576c6e538149aa7af6c8f0a540bbd9a715f
+| Author: Ian Miell <ian.miell@gmail.com>
+| Date:   Thu Feb 22 09:50:15 2018 +0000
+| 
+|     change
+| 
+| diff --git a/acommonfile b/acommonfile
+| index e69de29..e449989 100644
+| --- a/acommonfile
+| +++ b/acommonfile
+| @@ -0,0 +1,2 @@
+| +Line 1 is common
+| +This Line 2 is different
+| 
+* commit e44d69a9d51bf84f76e099023ec460fd9385b7f7
+  Author: Ian Miell <ian.miell@gmail.com>
+  Date:   Thu Feb 22 09:49:22 2018 +0000
+  
+      initial
+  
+  diff --git a/acommonfile b/acommonfile
+  new file mode 100644
+  index 0000000..e69de29
+  diff --git a/afileb b/afileb
+  new file mode 100644
+  index 0000000..e69de29
+
+
+
+
+mkdir -p repoa
+mkdir -p repob
+cd repoa
+git init
+cat > acommonfile << END
+Line 1 is common
+Line 2 is a random string asdasdads
+END
+git commit -am 'Initial repoa'
+cat >> acommonfile << END
+checkin 2 repoa
+END
+git commit -am 'Checkin 2'
+cat >> acommonfile << END
+checkin 3 repoa
+END
+git commit -am 'Checkin 3'
+cd ../repob
+cat > acommonfile << END
+Line 1 is common
+Line 2 is a random string sdfsdfsdf
+END
+git commit -am 'Initial repob'
+git remote add repoa ../repoa
+git fetch repoa
+echo 'Now get repoas checkin 3 commit id and cherry-pick it'
+
+
