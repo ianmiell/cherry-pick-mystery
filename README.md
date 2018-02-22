@@ -1,4 +1,4 @@
-`script.sh` creates two repos:
+`cherry-pick.sh` creates two repos:
 
 ```
 repoa
