@@ -1,6 +1,7 @@
 rm -rf /tmp/repoa /tmp/repob
 mkdir -p /tmp/repoa
 mkdir -p /tmp/repob
+# create repoa
 cd /tmp/repoa
 git init
 cat > acommonfile << END
@@ -16,6 +17,7 @@ cat >> acommonfile << END
 checkin 3 repoa
 END
 git commit -am 'Checkin 3'
+# create repob
 cd /tmp/repob
 git init
 cat > acommonfile << END
